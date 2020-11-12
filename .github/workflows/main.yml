@@ -26,6 +26,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-west-2
 
-    - name: Login to Heroku
+    - name: Terraform init
       run: |
-        heroku login
+        terraform init
+
+    - name: Terraform plan
+      run: |
+        terraform plan
