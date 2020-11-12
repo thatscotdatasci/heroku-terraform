@@ -9,6 +9,8 @@ jobs:
   plan:
     name: Perform Terraform Plan
     runs-on: ubuntu-latest
+    env:
+      HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
 
     steps:
     - name: Checkout repository
@@ -23,3 +25,7 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-west-2
+
+    - name: Login to Heroku
+      run: |
+        heroku login
