@@ -10,8 +10,8 @@ resource "heroku_app" "tsds-streamlit-nn-intuition" {
   stack  = "container"
 }
 
-resource "heroku_app" "tsds-streamlit-dlai-tensorflow-cert" {
-  name   = "tsds-streamlit-dlai-tensorflow-cert"
+resource "heroku_app" "tsds-streamlit-dlai-tf-cert" {
+  name   = "tsds-streamlit-dlai-tf-cert"
   region = "eu"
   stack  = "container"
 }
