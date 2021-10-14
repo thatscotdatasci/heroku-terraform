@@ -15,3 +15,9 @@ resource "heroku_app" "tsds-streamlit-dlai-tf-cert" {
   region = "eu"
   stack  = "container"
 }
+
+resource "heroku_app" "tsds-streamlit-l90" {
+  name   = "tsds-streamlit-l90"
+  region = "eu"
+  stack  = "container"
+}
